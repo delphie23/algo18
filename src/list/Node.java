@@ -9,6 +9,12 @@ public class Node<D> {
 	 private float key;
 	 private D data;
 	
+	/**
+	 * Constucts a node with the specified key and data fields.
+	 * @WCP O(1).
+	 * @param key the key field of the new node.
+	 * @param data the data field of the new node.
+	 */
 	public Node(float key, D data) {
 		this.key = key;
 		this.data = data;
@@ -17,6 +23,7 @@ public class Node<D> {
 	}
 
 	/**
+	 * @WCP O(1).
 	 * @return the next node
 	 */
 	public Node<D> getNext() {
@@ -24,6 +31,7 @@ public class Node<D> {
 	}
 
 	/**
+	 * @WCP O(1).
 	 * @param next the node to set as the next one
 	 */
 	public void setNext(Node<D> next) {
@@ -32,6 +40,7 @@ public class Node<D> {
 	}
 
 	/**
+	 * @WCP O(1).
 	 * @return the previous node
 	 */
 	public Node<D> getPrev() {
@@ -39,14 +48,16 @@ public class Node<D> {
 	}
 
 	/**
-	 * @return the key
+	 * @WCP O(1).
+	 * @return the key field
 	 */
 	public float getKey() {
 		return key;
 	}
 
 	/**
-	 * @return the data
+	 * @WCP O(1).
+	 * @return the data field
 	 */
 	public D getData() {
 		return data;
@@ -54,6 +65,7 @@ public class Node<D> {
 	
 	/**
 	 * Inserts a node right between this node and the next one.
+	 * @WCP O(1).
 	 * @param node the node to insert.
 	 */
 	public void insertNext(Node<D> node) {
